@@ -30,6 +30,8 @@ const galleryMarkup = galleryItems.reduce(
 refs.gallery.insertAdjacentHTML("afterbegin", galleryMarkup);
 refs.image.classList.add("gallery__image");
 
+
+
 refs.gallery.addEventListener("click", onGalleryClick);
 refs.btn.addEventListener("click", onClickHandlerClose);
 refs.modal.addEventListener("click", closeLightbox);
@@ -48,11 +50,10 @@ function onGalleryClick(e) {
 }
 
 function onClickHandlerClose(e) {
-  e.preventDefault(); 
+  
   refs.lightbox.classList.remove("is-open");
   refs.lightbox__image.src = '';
   refs.lightbox__image.alt = '';
-  window.removeEventListener("keyup", clickKey);
 }
 
 function closeLightbox(event) {
