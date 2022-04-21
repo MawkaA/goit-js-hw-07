@@ -22,7 +22,7 @@ function galleryList(galleryItems) {
 }
 
 let Gallery = new SimpleLightbox(".gallery a", {
-  captionsData: alt,
+  captionsData: "alt",
   captionDelay: 250,
 });
 console.log(Gallery);
